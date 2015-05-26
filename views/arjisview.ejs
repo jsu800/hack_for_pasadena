@@ -1,0 +1,30 @@
+<div class="claro" data-dojo-type="dijit.layout.BorderContainer"
+     data-dojo-props="design:'headline', gutters:false"
+     style="width:100%;height:100%;margin:0px;">
+
+	<div id="map"
+	     data-dojo-type="dijit.layout.ContentPane"
+	     data-dojo-props="region:'center'" class="panel">
+	</div>
+
+	<div id="directions"
+	     data-dojo-type="dijit.layout.ContentPane"
+	     data-dojo-props="region:'bottom'" class="panel"
+	     style="height:250px;">
+
+		<div id="HomeButton"></div>
+		<div id="LocateButton"></div>
+
+		<b>Closest Agencies: </b>
+		<select name="numLocations" data-dojo-type="dijit.form.ComboBox" value="1" onChange="app.params.defaultTargetFacilityCount=this.value;app.clearGraphics();" style="width:60px;">
+			<option selected="selected">1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>closest agencies from me.</b>
+		</select>
+		<div id="directionsDiv"></div>
+
+	</div>
+</div>

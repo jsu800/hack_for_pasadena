@@ -1,0 +1,72 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+	    <span class="wsite-logo"><a href="/"><img src="img/logo.png"></a></span>
+  </div>
+</div>
+
+<div class="container utable">
+	<table class="table table-condensed" width="647">
+		<thead>
+		<tr>
+			<th class="col-1">#</th>
+			<th class="col-2">Donations</th>
+			<th class="col-3">Notify</th>
+			<th class="col-4">Agency</th>
+			<th class="col-5">Status</th>
+		</tr>
+		</thead>
+		<tbody>
+		<%
+		for (var i = 0; i < data.length; i++) {
+			var item = data[i];
+		%>
+			<tr>
+				<td class="col-1">
+					<div class="row">
+						<div>
+							<span class="input-group-addon">
+								<input type="checkbox">
+								</span>
+							</div><!-- /.col-lg-6 -->
+						</div>
+					</td>
+					<td class="col-2">
+						<div>
+						<%= item.name%> <%= item.stret_address%> <%= item.city%>
+						</div>
+					</td>
+					<td class="col-3">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle btnstatus<%=i%>" data-toggle="dropdown">Action <span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#" data-counter="btnstatus<%=i%>">EMAIL</a></li>
+								<li><a href="#" data-counter="btnstatus<%=i%>">SMS</a></li>
+								<li><a href="#" data-counter="btnstatus<%=i%>">CALL</a></li>
+							</ul>
+						</div><!-- /btn-group -->
+					</td>
+					<td class="col-4">
+						<div class="linktomap">
+						<a href="/map"> <%= item.receiver.name%> <%= item.receiver.stret_address%> <%= item.receiver.city%> </a>
+						</div>
+
+					</td>
+					<td class="col-5">
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">READY <span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">READY</a></li>
+								<li><a href="#">EN ROUTE</a></li>
+								<li><a href="#">DELIVERED</a></li>
+							</ul>
+						</div><!-- /btn-group -->
+					</td>
+				</tr>
+		<% } %>
+		</tbody>
+	</table>
+  <footer>
+    <p>&copy; UrbanHarvester 2014</p>
+  </footer>
+
+</div> <!-- /container -->
