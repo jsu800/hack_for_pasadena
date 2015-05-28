@@ -5,7 +5,7 @@ ESRI service. Adding service endpoint to fetch the correct routing information i
 the destination in live map based on the user's current location. This is the JavaScript sample made on the day of the hackathon
 
 #  Node.js Boostrap 
-+ using Express 3.x 
++ Express 3.x 
 + EJS 
 + Twitter Bootstrap v2
 + Responsive CSS3
